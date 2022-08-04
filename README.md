@@ -19,17 +19,18 @@ then in navchang log in to log out
 Homepage :
         -blog posts
                 - blog title
-                - date created
+                - date created <<<<<<<<
+
 Blog Post
         - title
         - content
-        - username
-        - date
+        - username <<<<<<>>>>>>
+        - date <<<<<<<<>>>>>>>>
         - option to leave a comment
 enter comment and submit and saved
 comment
         - username
-        - date
+        - date <<<<>>>>
         - content
 
 dashboard
