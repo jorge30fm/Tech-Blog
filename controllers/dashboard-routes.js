@@ -9,7 +9,13 @@ router.get('/', withAuth, async (req, res) => {
 			where: {
 				user_id: req.session.userId,
 			},
+			attributes: ["id", "post_body", "title", "created_at"],
+			include:[{
+				model: User,
+				attributes: ["username"],
+			},]
 		});
+		const user= await Post.findByPk(req.session.userId)
 		// this sanitizes the data we just got from the db above (you have to create the above)
 		const posts = postData.map((post) => post.get({ plain: true }));
 
@@ -18,7 +24,8 @@ router.get('/', withAuth, async (req, res) => {
 			// this is how we specify a different layout other than main! no change needed
 			layout: "dashboard",
 			// coming from line 10 above, no change needed
-			posts,
+
+			posts
 		});
 	} catch (err) {
 		res.redirect("login");

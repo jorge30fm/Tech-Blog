@@ -46,12 +46,12 @@ router.get("/post/:id", async (req, res) => {
 		// change the model below, but not the findByPk method.
 		const postData = await Post.findByPk(req.params.id, {
 			// helping you out with the include here, no changes necessary
+			attributes: ['id', 'post_body', 'title', 'created_at'],
 			include: [
 				User,
-				{
-					model: Comment,
-					include: [User],
-				},
+				{model: Comment,
+					attributes: ['comment_text', 'created_at'],
+				include: {model: User}}
 			],
 		});
 
