@@ -1,8 +1,10 @@
-<article class="post card list-group">
-        <h2 class="card-header">{{title}}</h2>
-        <h3>{{user.username}} on {{format_date created_at}}</h3>
-        <p class="card-body">{{post_body}}</p>
+<article class="post card list-group flex-row">
+        <h2 class="card-header col-9">{{title}}</h2>
+        <p class="col-3 tag">Posted by {{user.username}} on {{format_date created_at}}</p>
+        {{#if post_body}}
+        <p class="card-body col-12">{{post_body}}</p>
+        {{/if}}
         <div class="list-group">
-                <a href="/post/{{id}}">{{comments.length}}{{format_plural " comment" comments.length}}</a>
+                <a href="/post/{{id}}" class="comment-link">{{comments.length}}{{format_plural " comment" comments.length}}</a>
         </div>
 </article>

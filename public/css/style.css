@@ -1,8 +1,8 @@
 :root {
-  --primary: #ccdad1;
-  --secondary: #9caea9;
-  --tertiary: #788585;
-  --light-dark: #6f6866;
+  --primary: #232B2B;
+  --secondary: #801e0f;
+  --tertiary: #3f3f3f;
+  --light: rgba(250, 250, 250, 0.651);
   --dark: #38302e;
   --border-radius: 0.3rem;
 }
@@ -29,7 +29,7 @@ h5,
 h6 {
   font-weight: 700;
   margin: 0;
-  color: var(--dark);
+  color: var(--light);
   line-height: 1.25;
 }
 
@@ -41,12 +41,10 @@ h2 a {
   color: var(--primary);
 }
 
-header {
-  margin-top: 50px;
-}
+
 
 main {
-  margin: 20px auto;
+  margin: 7% auto;
   width: 94%;
 }
 
@@ -71,24 +69,26 @@ input {
 }
 
 .btn {
-  font-size: 1.3rem;
+  font-size: 1rem;
+  text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
   padding: 6px 5px;
   width: 100%;
   display: block;
   margin: 5px 0;
   border-radius: var(--border-radius);
-  color: var(--primary);
+  color: var(--secondary);
   border: none;
   outline: none;
-  background-color: var(--light-dark);
+  background-color: var(--light);
   box-shadow: 3px 3px var(--dark);
   transform: translate(-1px, -1px);
 }
 
 .btn:hover {
-  color: var(--primary);
-  background-color: var(--tertiary);
+  color: var(--light);
+  background-color: var(--secondary);
   transform: translate(0, 0);
   box-shadow: 2px 2px var(--dark);
 }
@@ -104,21 +104,29 @@ input {
 .navbar {
   width: 100%;
   position: fixed;
-  background-color: var(--dark);
+  background-color: var(--secondary);
+  display: flex;
+
+}
+.navbar ul {
+  display: flex;
+  text-align: center;
 }
 
-.nav-item {
-  margin: 0 40px;
+a {
+  text-decoration: none;
+  color: var(--light);
 }
-
 .nav-item a {
-  color: var(--primary);
+  color: white;
+  font-size: .8rem;
 }
 
 .hero {
-  padding: 3% 4%;
-  background-color: var(--dark);
+  background-color: var(--secondary);
   color: var(--primary);
+  display: flex;
+  margin-left: 5%;
 }
 
 .hero p {
@@ -126,17 +134,16 @@ input {
 }
 
 .app-title {
-  font-size: 3rem;
-  background-color: var(--primary);
-  color: var(--dark);
+  font-size: 1rem;
+  color: white;
   padding: 0 10px;
-  display: inline-block;
+  text-align: center;
   border-radius: var(--border-radius);
   box-shadow: 6px 5px var(--light-dark);
 }
 
 .app-title a {
-  color: var(--dark);
+  color: white;
 }
 
 .list-group {
@@ -147,41 +154,58 @@ input {
   margin-bottom: 10px;
   padding: 1.5%;
   border-radius: var(--border-radius);
-  background-color: var(--light-dark);
-  color: var(--primary);
+  background-color: var(--tertiary);
+  color: var(--light);
   text-decoration: none;
-}
 
+}
+ol {
+
+  list-style: none;
+}
 .list-item:hover {
   background-color: var(--dark);
 }
-
+label {
+  font-size: 1rem;
+  color: var(--secondary);
+  text-transform: uppercase;
+  font-weight: bolder;
+}
 .footer a {
   display: inline-block;
   padding: 1em;
   margin-bottom: .5em;
-  background-color: var(--dark);
-  color: var(--primary);
+  background-color: var(--secondary);
+  color: var(--light);
   border-radius: var(--border-radius);
   text-decoration: none;
 }
 
 /* CARDS */
 .card {
-  margin: 0 0 20px 0;
-  border: 3px solid var(--dark);
+  background-color: var(--light);
+  margin: 20px 0 0px 0;
   border-radius: var(--border-radius);
 }
 
 .card-header {
   color: var(--primary);
-  background-color: var(--dark);
-  padding: 1%;
   border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
+  font-size: 1rem;
 }
 
 .card-body {
   padding: 1%;
+  color: var(--primary);
+  text-align: left;
+}
+.tag {
+  font-size: .5rem;
+  text-align: end;
+}
+.comment-link {
+  color: var(--dark)
 }
 
 /* FORM */
