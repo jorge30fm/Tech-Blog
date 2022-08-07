@@ -1,4 +1,4 @@
-# Profesional README Generator
+# Tech Blog
 
 ![LICENSE BADGE](https://img.shields.io/badge/license-ISC-brightgreen?style=for-the-badge)
 
