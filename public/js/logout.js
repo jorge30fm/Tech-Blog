@@ -12,7 +12,6 @@ const logout = async function () {
 };
 var idleTime = 0;
 $(document).ready(function () {
-  window.alert('timer started')
 	// Increment the idle time counter every minute.
 	var idleInterval = setInterval(timerIncrement, 60000); // 1 minute
 
@@ -28,7 +27,6 @@ $(document).ready(function () {
 function timerIncrement() {
 	idleTime = idleTime + 1;
 	if (idleTime > 10) {
-    window.alert('timer run out')
 		logout(); // 20 minutes
 		window.location.reload();
 	}
