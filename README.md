@@ -13,7 +13,7 @@
 
 ## Description
 
-This is a CMS-styleblog siteto publish articles, blog posts, thoughts and opinions aboput any topic regarding tech. Users can sign up, log in, create and edit posts, view and comment on other users posts. Application uses bcrypt to protect user's passwords, a MySQL databased created using sequelize.js, express.js to create servers, and handlebars.js to dinamically generate html.
+This is a CMS-style blog site to publish articles, blog posts, thoughts and opinions about any topic regarding tech. Users can sign up, log in, create and edit posts, view and comment on other users posts. Application uses bcrypt to protect user's passwords, a MySQL databased created using sequelize.js, express.js to create servers, and handlebars.js to dinamically generate html.
 
 ## Installation
 
